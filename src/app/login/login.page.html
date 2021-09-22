@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><Center>Inicio de sesión</Center></ion-title>
+  </ion-toolbar>
+  <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">   
+        <a [routerLink]="['/home']" class="small-text"><Center>Volver a Inicio</Center></a>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input type="text" required #userName></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" required #pass></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+        <ion-button expand="block" (click)="ingresar(userName, pass)" color="primary">Ingresar</ion-button>
+        <br>
+        <center><a [routerLink]="['/recuperar-pass']" class="small-text">¿Olvidaste la contraseña?</a></center>
+        <br>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <center>¿No tienes una cuenta? <a [routerLink]="['/formulario']" class="small-text">Regístrate</a></center>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

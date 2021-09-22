@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title size="large"><Center>Bienvenid@ {{nombreUsuario}}!</Center></ion-title>
+  <br>
+  <center>Scanee el código QR para registrar la asistencia</center> 
+  <img src="https://latam.kaspersky.com/content/es-mx/images/repository/isc/2020/9910/a-guide-to-qr-codes-and-how-to-scan-qr-codes-2.png" alt="">
+
+  <ion-button color="primary" expand="block" >Registrar asistencia</ion-button> 
+</ion-content>
